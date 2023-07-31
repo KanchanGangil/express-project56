@@ -1,4 +1,4 @@
-const SliderModel = require('../../models/slider');
+const SliderModel = require('../../models/Slider');
 
 
 const cloudinary = require('cloudinary').v2;
