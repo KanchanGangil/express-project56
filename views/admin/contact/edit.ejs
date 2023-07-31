@@ -1,0 +1,43 @@
+<%-include('../header.ejs')%>
+<%-include('../sidebar.ejs')%>
+
+
+ 
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    
+
+    <!-- Main content -->
+
+    <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Edit Contact List</h3>
+          
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+          <form action="/admin/updatecontact/<%= d._id%>" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" value="<%=d.name%>" name="name"class="form-control" required>
+            </div>
+          
+            <button class=" btn btn-success">Submit</button>
+          </form> <!--form end-->
+        </div>
+        <!-- /.card-body -->
+      </div>
+      <!--modal start add property-->
+      
+      <!-- /.modal -->  
+      <!--/.modal end-->
+      <!-- /.card -->
+    </div>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+ 
+
+ <%-include('../footer.ejs')%>

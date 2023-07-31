@@ -1,0 +1,75 @@
+ <%- include ('./header.ejs')%>
+  <!-------------------container start------------------------>
+  <div class="container-fluid bg-success  ">
+    <br><br>
+    <div class="container py-5">
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-md-10">
+          <div class="card">
+            <div class="row">
+              <div class="col-md-6 col-lg-6 d-none d-md-block">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIJySexvPcQ94zCzaSrjZMGE28dkyNv3kKWJ-UFbMgVCBYQJH9scFzK1Zg37FhCipcKR0&usqp=CAU"
+                  alt="login form" style="height: 470px; width: 660px;" class="img-fluid" />
+              </div>
+              <div class="col-md-6 align-items-center ">
+                <div class="card-body bg-dark">
+                  <div class=" align-items-center mb-3 pb-1 text-white ">
+                    <img src="images/logo.png" alt="" class="img-fluid" style="width: 30px; height: 30px" />
+
+                    <h2 class="text-success text-center m-0 px-3 animated infinite heartBeat weblogo">
+                      BROAKER PORTAL
+                    </h2>
+                  </div>
+                  <h5 class="mb-3 pb-3 text-white" style="letter-spacing: 1px;">Sign into your admin account</h5>
+                  <% if(message2.length>0){ %>
+                    <div class="alert alert-danger">
+                      <%= message2 %>
+                    </div>
+                    <%}%>
+
+                      <div class="alert alert-danger">unauthrized admin</div>
+                      <% if(message1.length>0){ %>
+                        <div class="alert alert-danger">
+                          <%= message1 %>
+                        </div>
+                        <%}%>
+
+                          <form action="/verifylogin" method="post">
+
+                            <div class="mb-4 text-white">
+                              <label class="form-label">Email address</label>
+                              <input type="email" name="email" class="form-control" />
+
+                            </div>
+
+                            <div class="mb-4 text-white">
+                              <label class="form-label">Password</label>
+                              <input type="password" name="password" class="form-control " />
+
+                            </div>
+                            <div class="mb-4 text-center">
+                              <button type="submit" class="btn btn-success">Login</button>
+                            </div>
+                            <div class="text-center">
+                              <!-- <a class="text-white" href="/changepassword">change password?</a> -->
+                              <p class="mb-3 text-white text-center" style="color: #393f81;">Only Admin login is allow
+                                <a href="" class="text-success"></a></p>
+
+                              <a href="#!" class="small text-muted">Terms of use.</a>
+                              <a href="#!" class="small text-muted">Privacy policy</a>
+                            </div>
+                          </form>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br>
+
+  </div>
+  <!--------------------------container end------------------------------>
+ <%- include ('./footer.ejs')%>
